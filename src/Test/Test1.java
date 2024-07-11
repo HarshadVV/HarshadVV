@@ -1,8 +1,13 @@
 package Test;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Test1 {
 
@@ -11,12 +16,14 @@ public class Test1 {
 		WebDriver driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		
-		driver.get("http://autoxdev.katdev.com:4000/shop?category=4W");
-		Thread.sleep(10000);
+		driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+		driver.findElement(By.xpath("//button[.='Start']")).click();
 		
-		//dependent-independent using index
-		 String prodName=driver.findElement(By.xpath("//div[@class='prod-infos'][1]/ancestor::li[1]/descendant::span[@class='title'][1]")).getText();
-		 System.out.println(prodName);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(50));
+		WebElement var1=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[.='Hello World!']")));
+		
+		String textOfElement=var1.getText();
+		System.out.println(textOfElement);
 	}
 
 }

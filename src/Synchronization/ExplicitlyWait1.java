@@ -28,5 +28,13 @@ public class ExplicitlyWait1 {
         String textOfElement = var1.getText(); // Ensure to trim any leading or trailing whitespace
         System.out.println(textOfElement);
 
-       }
+     /* Conditions of Expected condition class:
+      * i.visibilityOfElementLocated(By locator):This condition when you want to wait for an element to be present in the DOM and visible on the web page
+      * ii.elementToBeClickable(By locator):This condition when you want to wait for an element to be clickable, meaning it is visible and enabled such that you can click on it
+      * iii.presenceOfElementLocated(By locator):This condition when you want to wait for an element to be present in the DOM of a page. It does not check if the element is visible or clickable
+      * iv.titleContains(String title)
+      */   
+        
+     }
+    
 }
