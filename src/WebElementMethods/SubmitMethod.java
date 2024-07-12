@@ -30,7 +30,6 @@ public class SubmitMethod {
 		
 		 btnLogin.submit();
 		   
-
 	}
 
 }
