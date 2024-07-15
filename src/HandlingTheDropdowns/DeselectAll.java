@@ -1,4 +1,4 @@
- 	package HandlingTheDropdowns;
+package HandlingTheDropdowns;
 
 import java.time.Duration;
 import java.util.Iterator;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class MultiselectDropdownSelection {
+public class DeselectAll {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
@@ -20,10 +20,11 @@ public class MultiselectDropdownSelection {
 		WebElement dropdownElement=driver.findElement(By.id("select"));
 		Select sel=new Select(dropdownElement);
 		
-		for (int i = 0; i <=2; i++) {
+		for (int i=1; i<4; i++) {
 			sel.selectByIndex(i);
-			Thread.sleep(5000);
-			}
+			Thread.sleep(6000);
+		}
+	    sel.deselectAll();
+	    
 	}
-
 }
