@@ -20,7 +20,7 @@ public class DragAndDropAction {
 		WebElement dest=driver.findElement(By.xpath("//ol[@id='bank']"));
 		
 		Actions act=new Actions(driver);
-		//dragAndDrop:It is used to perfrom the Drag and Drop Action
+		//dragAndDrop():This method is used to perform the Drag and Drop action
 		act.dragAndDrop(src, dest).perform();
 		}
 
