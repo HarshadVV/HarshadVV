@@ -19,8 +19,8 @@ public class IsMultipleMethod {
 		driver.get("https://formstone.it/components/dropdown/demo/");
 		WebElement dropdownElement=driver.findElement(By.id("demo_multiple"));
 		Select sel=new Select(dropdownElement);
-		/*isMultiple():This method is used to check the type of dropdown
-		 * If it is an multi-select dropdown it return 'true' otherwise 'false'
+		/*isMultiple():This method is used to check the type of drop-down
+		 * If it is an multi-select drop-down it return 'true' otherwise 'false'
 		 */
 		
 		boolean statusOfDropdown=sel.isMultiple();
