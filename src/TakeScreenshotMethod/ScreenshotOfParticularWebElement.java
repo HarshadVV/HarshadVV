@@ -27,8 +27,6 @@ public class ScreenshotOfParticularWebElement {
 		File dest=new File("./screenshots/seldownload.png");
 		Files.copy(src, dest);
 		
-		
-		;
-	}
+		}
 
 }
