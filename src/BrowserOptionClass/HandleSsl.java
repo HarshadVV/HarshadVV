@@ -17,7 +17,7 @@ public class HandleSsl {
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		 driver.get("https://expired.badssl.com/");
+		driver.get("https://expired.badssl.com/");
 		 
 		 System.out.println("Title of page= "+ driver.getTitle());
 

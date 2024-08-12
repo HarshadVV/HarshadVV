@@ -6,12 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class DisableAutomateMessageOnScreen {
+public class RunTestInIncognito {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		
 		ChromeOptions co=new ChromeOptions();
-		co.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});//disable automation  message 
+		co.addArguments("--incognito"); //running the test in incognito mode
+		
 		WebDriver driver=new ChromeDriver(co);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
@@ -19,7 +21,6 @@ public class DisableAutomateMessageOnScreen {
 		 
 		 String siteTitle=driver.getTitle();
 		 System.out.println(siteTitle);
-		 
 
 	}
 
